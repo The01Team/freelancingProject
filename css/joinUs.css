@@ -1,0 +1,137 @@
+
+
+h1, h2, h3, h4, h5, h6{
+    font-weight: 900;
+   }
+
+
+
+#logoText   {
+    font-family: 'Caveat', cursive;
+    font-family: 'Meie Script', cursive;
+    font-family: 'Mountains of Christmas', cursive;
+    font-family: 'Mrs Sheppards', cursive;
+    font-family: 'Pacifico', cursive;
+    font-family: 'Pattaya', sans-serif;
+    font-family: 'Princess Sofia', cursive;
+    font-family: 'Satisfy', cursive;
+    font-weight:normal;
+    color: #ebe5d9;
+    text-decoration: none;
+    font-size: 50px;
+}
+   a, label, input, select,button{
+       font-weight: 800;
+       border-radius: 9px;
+   }
+   
+   
+   header {
+       padding: 20px 0 10px;
+       background-color: #1e4542;
+       position: fixed;
+       width: 100%;
+       box-shadow: 0 2px 12px #918773;
+   }
+   span{
+       font-weight: bold;
+   }
+   header nav {
+       padding: 0 20px;
+       display: flex;
+       justify-content: space-between;
+   }
+   header nav li {
+       display: inline-block;
+       padding: 10px 30px;
+       font-size: 22px;
+       margin-top: 10px;
+   }
+   
+   header nav li a {
+       color: #ebe5d9;
+       text-decoration: none;
+   
+   }
+   header nav li:hover {
+       border-bottom: 3px solid #e9cbc3;
+     }
+   
+   footer {
+       background-color: #1e4542;
+       color: #e9cbc3;
+       text-align: center;
+       padding: 30px 0;
+       font-size: 20px;
+   }
+
+
+
+#leftSection {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    min-height: 90vh;
+    background-color: #ebe5d9;
+    padding: 150px 0px 50px;
+
+}
+#loadedImg {
+    max-height: 250px;
+    max-width: 250px;
+    display: none;
+}
+
+
+#createForm {
+    background-color: #918773;
+    margin: 0 auto;
+    display: block;
+    padding: 30px;
+    width: 50%;
+    border-radius: 1rem;
+    box-shadow: 0 6px 18px rgb(0, 0, 0);
+    color: #e9cbc3;
+}
+#createForm h1 {
+    text-align: center;
+    padding: 0px 20px 6px;
+    font-size: 30px;
+    border-bottom: 3px solid #1e4542;
+    display: inline-block;
+    margin-bottom: 20px;
+}
+.createFromTitle{
+    text-align: center;
+}
+#createForm label,
+#createForm input {
+    display: block;
+
+}
+#createForm textarea {
+    width: 100%;
+    resize: none;
+    /* border: 1.5px solid #fa8752; */
+    border-radius: 0.8rem;
+
+}
+
+#createForm div {
+    margin-bottom: 15px;
+}
+#createForm label {
+    margin-bottom: 5px;
+
+}
+
+
+.formRow {
+    display: flex;
+}
+.formRow div {
+    width: 50%;
+}
+
+
+
