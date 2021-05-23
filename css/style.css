@@ -1,0 +1,49 @@
+* {
+box-sizing: border-box;
+}
+
+header nav ul li {
+    
+    display: inline-block;
+}
+
+header nav ul  {
+    width: 60%;
+    background-color: coral;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    float: right;
+    height: 150px;
+}
+header nav ul li a {
+    text-decoration: none;
+    font-size: 40px;
+}
+
+#logoText {
+    display: flex;
+    padding-left: 3%;
+    align-items: center;
+    width: 40%;
+    background-color: coral;
+    text-decoration: none;
+    font-size: 50px;
+    float: left;
+    height: 150px;
+}
+
+#main-div
+{
+position: relative;
+}
+
+#main-div img {
+  width: 100%;
+}
+
+footer {
+    clear: both;
+    background-color: coral;
+}
+
