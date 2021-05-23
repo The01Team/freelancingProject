@@ -1,7 +1,6 @@
 'use strict';
 
 // all profiles
-
 getProfiles();
 
 // Add event listener to the form of filtering
