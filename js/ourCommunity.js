@@ -3,6 +3,7 @@
 
 
 // all profiles
+
 getProfiles(); 
 
 // Add event listener to the form of filtering
@@ -26,6 +27,7 @@ function changeCatHandler(event) {
 
 
         if (valueDropDown === Profile.all[i].category) {
+
             
     let YourName = document.createElement('h6');
     let profileContent = document.createElement('p');
@@ -75,10 +77,12 @@ function changeCatHandler(event) {
     // readBtnDiv.appendChild(readBtn);
 
 
+
     YourName.textContent = Profile.all[i].YourName;
     profileContent.innerHTML = Profile.all[i].profileContent;
     profileTitle.textContent = Profile.all[i].jobTitle;  
     profileCat.textContent = Profile.all[i].category;
+
 
     console.log(Profile.all[i].category);
 
@@ -114,8 +118,10 @@ function changeCatHandler(event) {
     
     let profileImg = document.createElement('img');
 
+
     
     profileImg.setAttribute('src', Profile.all[i].profileImg);
+
 
     
     profileImgDiv.appendChild(profileImg);
@@ -125,6 +131,7 @@ function changeCatHandler(event) {
 
     let profileMainContainer = document.createElement('div');
     profileMainContainer.classList.add('profileMainContainer');  
+
 
     let hrElement = document.createElement('hr');
     hrElement.classList.add('hrElement');

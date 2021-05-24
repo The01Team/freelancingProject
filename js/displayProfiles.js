@@ -31,6 +31,7 @@ function getProfiles() {
     let skillsRequired=document.createElement('h2');
     let projectName=document.createElement('h2');
     let YourName = document.createElement('h6');
+
     let profileContent = document.createElement('p');
     let profileTitle = document.createElement('h3');
     let profileCat = document.createElement('h6');
