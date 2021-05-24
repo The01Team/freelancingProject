@@ -1,7 +1,7 @@
 'use strict';
 
 // all profiles
-getProfiles();
+//getProfiles();
 
 // Add event listener to the form of filtering
 let catForm = document.getElementById('categoryForm');
@@ -29,27 +29,52 @@ function changeCatHandler(event) {
             let profileContent = document.createElement('p');
             let profileTitle = document.createElement('h3');
             let profileCat = document.createElement('h6');
+            let email = document.createElement('p');
+            let phoneNumber = document.createElement('p');
+
+
             let readBtn = document.createElement('button');
             let profileNameDiv = document.createElement('div');
             let profileContentDiv = document.createElement('div');
             let profileTitleDiv = document.createElement('div');
             let profileCatDiv = document.createElement('div');
-            let readBtnDiv = document.createElement('div');
-            let blogCatAndBlogger = document.createElement('div');
-            let YourNamePrefix = document.createElement('span');
-            let blogCatPrefix = document.createElement('span');
+            let emailDiv = document.createElement('div');
+            let phoneNumberDiv = document.createElement('div');
 
+            let readBtnDiv = document.createElement('div');
+            let profileCatAndName = document.createElement('div');
+            
+            let YourNamePrefix = document.createElement('span');
+            let profileCatPrefix = document.createElement('span');
+            let profileContact = document.createElement('div');
+            let emailPrefix = document.createElement('span');
+            let phoneNumberPrefix = document.createElement('span');
 
             readBtnDiv.classList.add('readMoreButton');
-            YourNamePrefix.textContent = 'Written by ';
-            blogCatPrefix.textContent = 'Category: ';
+            YourNamePrefix.textContent = 'Name ';
+            profileCatPrefix.textContent = 'Category: ';
+
+            emailPrefix.textContent = 'Email:  ';
+            phoneNumberPrefix.textContent = 'Phone Number : ';
+           
+
             profileNameDiv.appendChild(YourNamePrefix);
-            profileCatDiv.appendChild(blogCatPrefix);
             profileNameDiv.appendChild(YourName);
 
-            profileContentDiv.appendChild(profileContent);
-            profileTitleDiv.appendChild(profileTitle);
+            profileCatDiv.appendChild(profileCatPrefix);
             profileCatDiv.appendChild(profileCat);
+
+            emailDiv.appendChild(emailPrefix);
+            emailDiv.appendChild(email);
+
+            phoneNumberDiv.appendChild(phoneNumberPrefix);
+            phoneNumberDiv.appendChild(phoneNumber);
+
+            profileContentDiv.appendChild(profileContent);
+
+            profileTitleDiv.appendChild(profileTitle);
+            
+            
             readBtnDiv.appendChild(readBtn);
 
 
@@ -58,7 +83,9 @@ function changeCatHandler(event) {
             profileContent.innerHTML = Profile.all[i].profileContent;
             profileTitle.textContent = Profile.all[i].jobTitle;
             profileCat.textContent = Profile.all[i].category;
-
+            email .textContent = Profile.all[i].email ;
+            phoneNumber .textContent = Profile.all[i].phoneNumber ;
+            
             console.log(Profile.all[i].category);
 
             readBtn.textContent = 'View Profiles';
@@ -68,9 +95,14 @@ function changeCatHandler(event) {
             let profileInfoDiv = document.createElement('div');
             let profileImgDiv = document.createElement('div');
             profileInfoDiv.appendChild(profileTitleDiv);
-            blogCatAndBlogger.appendChild(profileNameDiv);
-            blogCatAndBlogger.appendChild(profileCatDiv);
-            profileInfoDiv.appendChild(blogCatAndBlogger);
+            profileCatAndName.appendChild(profileNameDiv);
+            profileCatAndName.appendChild(profileCatDiv);
+            profileInfoDiv.appendChild(profileCatAndName);
+
+            profileContact.appendChild(emailDiv);
+            profileContact.appendChild(phoneNumberDiv);
+            profileInfoDiv.appendChild(profileContact);
+            
             profileInfoDiv.appendChild(profileContentDiv);
             profileInfoDiv.appendChild(readBtnDiv);
 
@@ -80,7 +112,12 @@ function changeCatHandler(event) {
             profileNameDiv.classList.add('profileNameDiv');
             profileTitleDiv.classList.add('profileTitleDiv');
             profileCatDiv.classList.add('profileCatDiv');
-            blogCatAndBlogger.classList.add('blogCatAndBlogger');
+            profileCatAndName.classList.add('profileCatAndName');
+
+            emailDiv.classList.add('emailDiv');
+            phoneNumberDiv.classList.add('phoneNumberDiv');
+            profileContact.classList.add('profileContact');
+            
 
             let profileImg = document.createElement('img');
 
