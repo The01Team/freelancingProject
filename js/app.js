@@ -55,7 +55,7 @@ if(Profile.all.length === 0){
   let Profile3 = new Profile('Hiba','Web Developer',' hiba123@gmail.com','078772357','Employee', Profile3Content);
  
   Profile1.setProfileImg('img/slack-imgs.jpg');
-  Profile2.setProfileImg('img/slack-canada.jpg');
+  Profile2.setProfileImg('images/Osama.jpg');
   Profile3.setProfileImg('img/slack-imgs.png');
  
   Profile1.storeToLocalStorage();
