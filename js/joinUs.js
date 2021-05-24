@@ -16,6 +16,8 @@ for (let i = 0; i < categoriesArray.length; i++) {
   option.textContent = categoriesArray[i];
 }
 
+let imgFile;
+
 let submitBtn = document.getElementById('createForm');
 submitBtn.addEventListener('submit', createProfile);
 
@@ -32,7 +34,8 @@ function createProfile(event) {
   let phoneNumber = event.target.phoneNumber.value;
   let profileContent = event.target.profileContent.value;
 
-  let url = event.target.image.value;
+  // let url = event.target.image.value;
+  let url = imgFile
   let list = event.target.categoryOptions.value;
 
   let newObj = new Profile(YourName, jobTitle, email, phoneNumber, list, profileContent, url);

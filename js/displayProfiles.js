@@ -1,18 +1,25 @@
 // Add event listener to the form of filtering
-let catArray = ['Employee', 'Employer'];
+let catArray = ['Employee', 'Employeer'];
 
 // The function that is responsible of filtering blogs by category
 let categoriesDropDownList = document.getElementById('selectCat');
-for (let i = 0; i < Profile.all.length; i++) {
+// for (let i = 0; i < Profile.all.length; i++) {
 
-  catArray.push(Profile.all[i].category);
-}
+//   catArray.push(Profile.all[i].category);
+// }
 for (let i = 0; i < catArray.length; i++) {
   let option = document.createElement('option');
   categoriesDropDownList.append(option);
   option.textContent = catArray[i];
 }
 
+
+
+// for (let i = 0; i < categoriesArray.length; i++) {
+//   let option = document.createElement('option');
+//   categoriesDropDownList.append(option);
+//   option.textContent = categoriesArray[i];
+// }
 
 // Retreives all blogs from local storage and display them on the blogs page
 function getProfiles() {
@@ -23,18 +30,38 @@ function getProfiles() {
     let profileContent = document.createElement('p');
     let profileTitle = document.createElement('h3');
     let profileCat = document.createElement('h6');
-    let readBtn = document.createElement('button');
+    // let readBtn = document.createElement('button');
     let profileNameDiv = document.createElement('div');
     let profileContentDiv = document.createElement('div');
     let profileTitleDiv = document.createElement('div');
     let profileCatDiv = document.createElement('div');
-    let readBtnDiv = document.createElement('div');
+    // let readBtnDiv = document.createElement('div');
     let blogCatAndBlogger = document.createElement('div');
     let YourNamePrefix = document.createElement('span');
     let blogCatPrefix = document.createElement('span');
+    let phoneNumberPrefix= document.createElement('span')
+    let emailPrefix=document.createElement('span')
 
 
-    readBtnDiv.classList.add('readMoreButton');
+    let email=document.createElement('h6');
+    let phoneNumber=document.createElement('p');
+    let profileEmailDiv=document.createElement('div');
+    let profileNumberDiv=document.createElement('div');
+    phoneNumberPrefix.textContent='Phone Number';
+    emailPrefix.textContent='Email';
+    profileEmailDiv.appendChild(email);
+    profileNumberDiv.appendChild(phoneNumber);
+    email.textContent=Profile.all[i].email;
+    phoneNumber.textContent=Profile.all[i].phoneNumber;
+    blogCatAndBlogger.appendChild(profileEmailDiv);
+    blogCatAndBlogger.appendChild(profileNumberDiv);
+    
+    profileNumberDiv.appendChild(phoneNumberPrefix);
+    profileEmailDiv.appendChild(emailPrefix);
+    
+
+
+    // readBtnDiv.classList.add('readMoreButton');
     YourNamePrefix.textContent = 'Written by ';
     blogCatPrefix.textContent = 'Category: ';
     profileNameDiv.appendChild(YourNamePrefix);
@@ -44,7 +71,7 @@ function getProfiles() {
     profileContentDiv.appendChild(profileContent);
     profileTitleDiv.appendChild(profileTitle);
     profileCatDiv.appendChild(profileCat);
-    readBtnDiv.appendChild(readBtn);
+    // readBtnDiv.appendChild(readBtn);
 
 
     YourName.textContent = Profile.all[i].YourName;
@@ -55,9 +82,9 @@ function getProfiles() {
 
     console.log(Profile.all[i].category);
 
-    readBtn.textContent = 'View Profiles';
-    readBtn.setAttribute('id', i);
-    readBtn.addEventListener('click', saveIdLs);
+    // readBtn.textContent = 'View Profiles';
+    // readBtn.setAttribute('id', i);
+    // readBtn.addEventListener('click', saveIdLs);
 
     let profileInfoDiv = document.createElement('div');
     let profileImgDiv = document.createElement('div');
@@ -66,7 +93,7 @@ function getProfiles() {
     blogCatAndBlogger.appendChild(profileCatDiv);
     profileInfoDiv.appendChild(blogCatAndBlogger);
     profileInfoDiv.appendChild(profileContentDiv);
-    profileInfoDiv.appendChild(readBtnDiv);
+    // profileInfoDiv.appendChild(readBtnDiv);
 
     /* Class lists */
     profileInfoDiv.classList.add('profileLeftDiv');
@@ -75,6 +102,8 @@ function getProfiles() {
     profileTitleDiv.classList.add('profileTitleDiv');
     profileCatDiv.classList.add('profileCatDiv');
     blogCatAndBlogger.classList.add('blogCatAndBlogger');
+    profileNumberDiv.classList.add('profileNumberDiv');
+    profileEmailDiv.classList.add('profileEmailDiv');
 
 
     let profileImg = document.createElement('img');
@@ -107,7 +136,7 @@ function getProfiles() {
 function saveIdLs(event) {
   let selectedId = event.target.id;
   localStorage.setItem('Profile-Id', JSON.stringify(selectedId));
-  window.location.replace('myprofile.html');
+  // window.location.replace('myprofile.html');
 
 }
 
