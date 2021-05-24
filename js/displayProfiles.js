@@ -1,6 +1,7 @@
 // Add event listener to the form of filtering
 let catArray = ['Employee', 'Employeer'];
 
+
 // The function that is responsible of filtering blogs by category
 let categoriesDropDownList = document.getElementById('selectCat');
 // for (let i = 0; i < Profile.all.length; i++) {
@@ -26,6 +27,9 @@ function getProfiles() {
   let mainSection = document.getElementById('profilesRender');
   mainSection.innerHTML = '';
   for (let i = 0; i < Profile.all.length; i++) {
+    let projectDetails=document.createElement('p');
+    let skillsRequired=document.createElement('h2');
+    let projectName=document.createElement('h2');
     let YourName = document.createElement('h6');
     let profileContent = document.createElement('p');
     let profileTitle = document.createElement('h3');
@@ -37,7 +41,7 @@ function getProfiles() {
     let profileCatDiv = document.createElement('div');
     // let readBtnDiv = document.createElement('div');
     let blogCatAndBlogger = document.createElement('div');
-    let YourNamePrefix = document.createElement('span');
+    // let YourNamePrefix = document.createElement('span');
     let blogCatPrefix = document.createElement('span');
     let phoneNumberPrefix= document.createElement('span')
     let emailPrefix=document.createElement('span')
@@ -49,24 +53,28 @@ function getProfiles() {
     let profileNumberDiv=document.createElement('div');
     phoneNumberPrefix.textContent='Phone Number';
     emailPrefix.textContent='Email';
+
+    profileNumberDiv.appendChild(phoneNumberPrefix);
+    profileEmailDiv.appendChild(emailPrefix);
+    
     profileEmailDiv.appendChild(email);
     profileNumberDiv.appendChild(phoneNumber);
     email.textContent=Profile.all[i].email;
     phoneNumber.textContent=Profile.all[i].phoneNumber;
-    blogCatAndBlogger.appendChild(profileEmailDiv);
-    blogCatAndBlogger.appendChild(profileNumberDiv);
     
-    profileNumberDiv.appendChild(phoneNumberPrefix);
-    profileEmailDiv.appendChild(emailPrefix);
     
 
 
     // readBtnDiv.classList.add('readMoreButton');
-    YourNamePrefix.textContent = 'Written by ';
+    // YourNamePrefix.textContent = 'Written by ';
     blogCatPrefix.textContent = 'Category: ';
-    profileNameDiv.appendChild(YourNamePrefix);
+    // profileNameDiv.appendChild(YourNamePrefix);
     profileCatDiv.appendChild(blogCatPrefix);
     profileNameDiv.appendChild(YourName);
+    profileContentDiv.appendChild(skillsRequired);
+    profileContentDiv.appendChild(projectName);
+    profileContentDiv.appendChild(projectDetails);
+    
 
     profileContentDiv.appendChild(profileContent);
     profileTitleDiv.appendChild(profileTitle);
@@ -75,10 +83,13 @@ function getProfiles() {
 
 
     YourName.textContent = Profile.all[i].YourName;
-    
     profileContent.innerHTML = Profile.all[i].profileContent;
     profileTitle.textContent = Profile.all[i].jobTitle;  
     profileCat.textContent = Profile.all[i].category;
+    projectName.textContent=Profile.all[i].projectName;
+    skillsRequired.textContent=Profile.all[i].skillsRequired;
+    projectDetails.textContent=Profile.all[i].projectDetails;
+
 
     console.log(Profile.all[i].category);
 
@@ -88,10 +99,17 @@ function getProfiles() {
 
     let profileInfoDiv = document.createElement('div');
     let profileImgDiv = document.createElement('div');
-    profileInfoDiv.appendChild(profileTitleDiv);
     blogCatAndBlogger.appendChild(profileNameDiv);
+    profileInfoDiv.appendChild(profileTitleDiv);
+    blogCatAndBlogger.appendChild(profileEmailDiv);
+    blogCatAndBlogger.appendChild(profileNumberDiv);
+    
+    
+    
     blogCatAndBlogger.appendChild(profileCatDiv);
+    // profileInfoDiv.appendChild(profileTitleDiv);
     profileInfoDiv.appendChild(blogCatAndBlogger);
+    // profileInfoDiv.appendChild(profileTitleDiv);
     profileInfoDiv.appendChild(profileContentDiv);
     // profileInfoDiv.appendChild(readBtnDiv);
 
@@ -105,11 +123,13 @@ function getProfiles() {
     profileNumberDiv.classList.add('profileNumberDiv');
     profileEmailDiv.classList.add('profileEmailDiv');
 
-
+    
     let profileImg = document.createElement('img');
 
+    
     profileImg.setAttribute('src', Profile.all[i].profileImg);
 
+    
     profileImgDiv.appendChild(profileImg);
     
     let profilesRender = document.createElement('section');
@@ -127,6 +147,7 @@ function getProfiles() {
     mainSection.appendChild(profilesRender);
 
     profileImgDiv.classList.add('profileRightDiv');
+    
     profilesRender.classList.add('profileContentRow');
 
   }
