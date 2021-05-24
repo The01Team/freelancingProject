@@ -1,6 +1,6 @@
 'use strict';
 
-let Profile=function(YourName,jobTitle,email,phoneNumber,category,profileContent)
+let Profile=function(YourName,jobTitle,email,phoneNumber,category,profileContent,skillsRequired,projectName,projectDetails)
 {
 this.YourName=YourName;
 this.jobTitle=jobTitle;
@@ -9,7 +9,9 @@ this.phoneNumber=phoneNumber;
 this.category=category;
 this.profileImg = '';
 this.profileContent=profileContent;
-
+this.skillsRequired=skillsRequired;
+this.projectName=projectName;
+this.projectDetails=projectDetails;
 Profile.all.push(this);
 
 };
@@ -18,6 +20,7 @@ Profile.prototype.setProfileImg = function(profileImgURL){
 this.profileImg = profileImgURL;
 
 };
+
 
 
 Profile.prototype.storeToLocalStorage = function(){
@@ -49,7 +52,6 @@ if(Profile.all.length === 0){
 
   let Profile3Content = 'Very recently, I used our social media channels to share some alarming statistics about the dangers of ‘silent’ heart attacks – cardiac episodes so mild that they go unnoticed until the patient requires an ECG.<br>The statistics themselves are sobering enough – around 45% of all heart attacks are silent and their long-term effect on heart health can be significant, with a major and possibly fatal cardiac event more likely with each episode.<br>But they become alarming when you add in other considerations.<br>For example, four in every ten people admit they either avoid making an appointment with their GP to have a heart check-up, or make the appointment but then cancel it at the last minute.<br>Add to this the fact that heart checks aren’t a standard element of a routine NHS or GP check and you begin to see an emerging picture of increasing risk.<br>One of the statistics that surprises most of the clients we see at The Natural Doctor® is that 50% of all heart attack victims havenormal cholesterol levels. No-one is going to tell you that lowering cholesterol is a bad thing; but if you’re someone who thinks lowering cholesterol is the whole answer to tackling the health of your heart then you could be in for a nasty surprise.<br>For a great many people – and especially for men who are more naturally predisposed to heart conditions – what stops them going through with an appointment is that age-old process of knowledge breeding fear.<br>Knowledge in the sense that they might recognise their lifestyle puts them at exponentially greater risk or, perhaps, that there is a history of heart disease in their family. Fear in the sense of having their worst suspicions confirmed.<br>Perversely, for those people, not knowing they have a problem means there’s no problem to deal with. Which works – but only until their heart doesn’t.<br>In reality, of course, we’d all logically agree that knowing is the better option, whether there is an identified risk or not, because it gives us time to take the necessary steps to make the changes that need to be made to protect our hearts.<br>Here at The Natural Doctor®, our PULs cardiovascular risk assessment is designed to do exactly that: assess your risk of a serious cardiac event and then beginning the process of giving you and/or your GP the information you need to stop it from ever happening.';
 
- 
   let Profile1 = new Profile('Mariam','Web Developer',' mariam123@gmail.com','078362357','Employee', Profile1Content);
   let Profile2 = new Profile('Osama','Web Developer',' osama123@gmail.com','0787762357','Employee', Profile2Content);
   let Profile3 = new Profile('Hiba','Web Developer',' hiba123@gmail.com','078772357','Employee', Profile3Content);
@@ -57,8 +59,14 @@ if(Profile.all.length === 0){
   Profile1.setProfileImg('img/slack-imgs.jpg');
   Profile2.setProfileImg('images/Osama.jpg');
   Profile3.setProfileImg('img/slack-imgs.png');
+
+
  
   Profile1.storeToLocalStorage();
 //   Profile2.storeToLocalStorage();
 //   Profile3.storeToLocalStorage();
 }
+
+let a;
+let b;
+let y;
