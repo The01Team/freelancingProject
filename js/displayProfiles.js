@@ -27,6 +27,7 @@ function getProfiles() {
   mainSection.innerHTML = '';
   for (let i = 0; i < Profile.all.length; i++) {
     let YourName = document.createElement('h6');
+
     let profileContent = document.createElement('p');
     let profileTitle = document.createElement('h3');
     let profileCat = document.createElement('h6');
