@@ -26,6 +26,6 @@ savedImg.addEventListener('load', function () {
   console.log(imgContext);
   // Get canvas contents as a data URL
   let imgAsDataURL = imgCanvas.toDataURL('image/png');
-//   imgFile64 = imgAsDataURL;
+  imgFile = imgAsDataURL;
 //   console.log(imgFile64.size);
 }, false);
