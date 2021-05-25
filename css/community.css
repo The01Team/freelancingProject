@@ -1,35 +1,199 @@
-#profilesRender {
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-    max-width: 300px;
-    margin: auto;
-    text-align: center;
-    font-family: arial;
+@import url(https://fonts.googleapis.com/css?family=Roboto:300,400,600);
+
+/* body{
+  width: 90%;
+  display: inline-block;
+  margin: auto;
+} */
+
+
+/* figure {
+  display: inline-block;
+  justify-content: space-between;
+  align-items: center;
+
+} */
+
+/* body {
+  font-family: "Inter", sans-serif;
+  
+  margin: 0 auto;
+  color: #241623;
+  background: #eef2f4;
+} */
+
+.profileContentRow {
+  
+  font-family: 'Roboto', Arial, sans-serif;
+  position: relative;
+  overflow: hidden;
+  margin-left: 70px;
+  margin-top: 50px;
+  min-width: 230px;
+  /* max-height: 700px; */
+  max-width: 570px;
+  width: 100%;
+  color: #0c0c0c;
+  text-align: left;
+  line-height: 1.4em;
+  background-color: #c199a2;
+  /* background-color: #141414; */
+
+  /* width: 100%; */
+  /* background-color: #141414; */
+  /* padding: 25px;
+  position: relative; */
+  display: inline-block;
+  height:680px ;
+  /* overflow: scroll; */
+ 
+}
+  .cover{padding: 20px;
+    opacity: .3;
+   
+  }
+  /* height: 300px;} */
+
+  .profileContentRow * {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    -webkit-transition: all 0.25s ease;
+    transition: all 0.25s ease;
+    
   }
   
+  .profileContentRow img {
+    max-width: 100%;
+    vertical-align: top;
+    opacity: 0.85;
+  }
+ 
+  .profileMainContainer{
+    width: 100%;
+    /* background-color: #141414; */
+    padding: 25px;
+    position: relative;
+    /* background-color: #a6adaf; */
+    background-color: #c199a2;
+   }
+
+   
+
+     .profileMainContainer:before {
+      position: absolute;
+      content: '';
+      bottom: 100%;
+      left: 0;
+      width: 0;
+      height: 0;
+      border-style: solid;
+      border-width: 100px 0 0px 700px;
+      border-color: transparent transparent transparent #7a6270;
+    }
+ 
+
+
+    .profileContentRow .profileImg{
+      border-radius: 50%;
+      position: absolute;
+      bottom: 100%;
+      left: 25px;
+      z-index: 1;
+      max-width: 150px;
+      opacity: 1;
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+      margin-top: -140px;
+    }
+    .profileContentRow h4{margin: 0 0 5px;
+      font-weight: 300;
+      font-size: 22px;}
+
+      .profileContentRow p{margin: -17px 0 10px;
+        font-size: 0.8em;
+        letter-spacing: 1px;
+        opacity: 0.8;
+        max-height:200px ;
+        max-width: 300px;
+        overflow-y: scroll;
+        padding-left: 50px;
+        float: right;
+        
+      }
+
+
+      .blogCatAndBlogger {display: inline-block;
+        float: left;
+      }
+
+     
+
+  /* .profileContentRow .profileMainContainer{width: 100%;
+  background-color: #141414;
+  padding: 25px;
+  position: relative;}. */
+
+
   /* .title {
     color: grey;
     font-size: 18px;
   }
    */
-  button {
-    border: none;
-    outline: 0;
-    display: inline-block;
-    padding: 8px;
-    color: white;
-    background-color: #000;
-    text-align: center;
-    cursor: pointer;
-    width: 100%;
-    font-size: 18px;
-  }
   
-  a {
-    text-decoration: none;
-    font-size: 22px;
-    color: black;
-  }
-  
-  button:hover, a:hover {
-    opacity: 0.7;
-  }
+ 
+
+select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  appearance: none;
+  outline: 0;
+  box-shadow: none;
+  border: 0 !important;
+  background: #2c3e50;
+  background-image: none;
+}
+select::-ms-expand {
+  display: none;
+}
+/* Custom Select */
+#categoryForm {
+  position: relative;
+  display: flex;
+  width: 20em;
+  height: 3em;
+  line-height: 3;
+  background: #2c3e50;
+  overflow: hidden;
+  border-radius: .25em;
+  margin: auto;
+
+}
+select {
+  flex: 1;
+  padding: 0 .5em;
+  color: #fff;
+  cursor: pointer;
+}
+/* Arrow */
+label{color: white;}
+
+#categoryForm::after {
+  content: 'FILTER';
+  color: white;
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 0 1em;
+  background: #34495e;
+  cursor: pointer;
+  pointer-events: none;
+  -webkit-transition: .25s all ease;
+  -o-transition: .25s all ease;
+  transition: .25s all ease;
+}
+/* Transition */
+#categoryForm:hover::after {
+  color: #f39c12;
+}
+
+

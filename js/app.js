@@ -56,9 +56,9 @@ if(Profile.all.length === 0){
   let Profile2 = new Profile('Osama','Web Developer',' osama123@gmail.com','0787762357','Employee', Profile2Content);
   let Profile3 = new Profile('Hiba','Web Developer',' hiba123@gmail.com','078772357','Employee', Profile3Content);
  
-  Profile1.setProfileImg('img/slack-imgs.jpg');
+  Profile1.setProfileImg('images/mariam.jpg');
   Profile2.setProfileImg('images/Osama.jpg');
-  Profile3.setProfileImg('img/slack-imgs.png');
+  Profile3.setProfileImg('images/heba1.jpg');
 
 
  

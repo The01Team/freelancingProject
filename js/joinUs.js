@@ -85,7 +85,7 @@ function createProfile(event) {
   let profileContent = event.target.profileContent? event.target.profileContent.value : '';
   // let skillsRequired=event.target.input2.value;
   // let projectName=event.target.input1.value;
-  let projectName=event.target.input1? event.target.input1.value: '';
+  let projectName=event.target.input1? event.target.input1.value: '----';
   let skillsRequired=event.target.input2? event.target.input2.value: '';
   let projectDetails=event.target.input3? event.target.input3.value: '';
   
