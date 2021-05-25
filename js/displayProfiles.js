@@ -27,10 +27,12 @@ function getProfiles() {
   let mainSection = document.getElementById('profilesRender');
   mainSection.innerHTML = '';
   for (let i = 0; i < Profile.all.length; i++) {
+    let cover=document.createElement('img');
+    cover.setAttribute('src',"https://lifeskills.ge/wp-content/uploads/2019/06/Things_successful_freelancers_do_at_home_body-1.jpg")
     let projectDetails=document.createElement('p');
     let skillsRequired=document.createElement('h2');
     let projectName=document.createElement('h2');
-    let YourName = document.createElement('h6');
+    let YourName = document.createElement('h4');
 
     let profileContent = document.createElement('p');
     let profileTitle = document.createElement('h3');
@@ -43,37 +45,40 @@ function getProfiles() {
     // let readBtnDiv = document.createElement('div');
     let blogCatAndBlogger = document.createElement('div');
     // let YourNamePrefix = document.createElement('span');
-    let blogCatPrefix = document.createElement('span');
-    let phoneNumberPrefix= document.createElement('span')
-    let emailPrefix=document.createElement('span')
+    let projectNamePrefix = document.createElement('span');
+    let skillsRequiredPrefix= document.createElement('span')
+    let projectDetailsPrefix=document.createElement('span')
 
 
     let email=document.createElement('h6');
-    let phoneNumber=document.createElement('p');
+    let phoneNumber=document.createElement('h6');
     let profileEmailDiv=document.createElement('div');
     let profileNumberDiv=document.createElement('div');
-    phoneNumberPrefix.textContent='Phone Number';
-    emailPrefix.textContent='Email';
 
-    profileNumberDiv.appendChild(phoneNumberPrefix);
-    profileEmailDiv.appendChild(emailPrefix);
+    projectNamePrefix.textContent='Project name: ';
+    // skillsRequiredPrefix.textContent='Skills Required';
+    // projectDetailsPrefix.textContent='Project Details';
+
+    // profileNumberDiv.appendChild(phoneNumberPrefix);
+    // profileEmailDiv.appendChild(emailPrefix);
     
     profileEmailDiv.appendChild(email);
     profileNumberDiv.appendChild(phoneNumber);
-    email.textContent=Profile.all[i].email;
-    phoneNumber.textContent=Profile.all[i].phoneNumber;
+    email.textContent=`Email: ${Profile.all[i].email}`;
+    phoneNumber.textContent=`Phone Number: ${Profile.all[i].phoneNumber}`;
     
     
 
 
     // readBtnDiv.classList.add('readMoreButton');
     // YourNamePrefix.textContent = 'Written by ';
-    blogCatPrefix.textContent = 'Category: ';
+    // blogCatPrefix.textContent = 'Category: ';
     // profileNameDiv.appendChild(YourNamePrefix);
-    profileCatDiv.appendChild(blogCatPrefix);
+    // profileCatDiv.appendChild(blogCatPrefix);
     profileNameDiv.appendChild(YourName);
-    profileContentDiv.appendChild(skillsRequired);
-    profileContentDiv.appendChild(projectName);
+    // profileContentDiv.appendChild(projectName);
+    // profileContentDiv.appendChild(skillsRequired);
+    
     profileContentDiv.appendChild(projectDetails);
     
 
@@ -86,10 +91,10 @@ function getProfiles() {
     YourName.textContent = Profile.all[i].YourName;
     profileContent.innerHTML = Profile.all[i].profileContent;
     profileTitle.textContent = Profile.all[i].jobTitle;  
-    profileCat.textContent = Profile.all[i].category;
+    profileCat.textContent = `Category is : ${Profile.all[i].category}`;
     projectName.textContent=Profile.all[i].projectName;
-    skillsRequired.textContent=Profile.all[i].skillsRequired;
-    projectDetails.textContent=Profile.all[i].projectDetails;
+          skillsRequired.textContent= Profile.all[i].skillsRequired;
+          projectDetails.textContent= Profile.all[i].projectDetails;
 
 
     console.log(Profile.all[i].category);
@@ -101,6 +106,8 @@ function getProfiles() {
     let profileInfoDiv = document.createElement('div');
     let profileImgDiv = document.createElement('div');
     blogCatAndBlogger.appendChild(profileNameDiv);
+    blogCatAndBlogger.appendChild(projectNamePrefix);
+    blogCatAndBlogger.appendChild(projectName);
     profileInfoDiv.appendChild(profileTitleDiv);
     blogCatAndBlogger.appendChild(profileEmailDiv);
     blogCatAndBlogger.appendChild(profileNumberDiv);
@@ -111,8 +118,11 @@ function getProfiles() {
     // profileInfoDiv.appendChild(profileTitleDiv);
     profileInfoDiv.appendChild(blogCatAndBlogger);
     // profileInfoDiv.appendChild(profileTitleDiv);
+    // blogCatAndBlogger.appendChild(projectDetailsPrefix);
     profileInfoDiv.appendChild(profileContentDiv);
     // profileInfoDiv.appendChild(readBtnDiv);
+    // blogCatAndBlogger.appendChild(skillsRequiredPrefix);
+    blogCatAndBlogger.appendChild(skillsRequired);
 
     /* Class lists */
     profileInfoDiv.classList.add('profileLeftDiv');
@@ -129,7 +139,8 @@ function getProfiles() {
 
     
     profileImg.setAttribute('src', Profile.all[i].profileImg);
-
+    // profileImg.classList.add('profileImg');
+    profileImg.setAttribute('class','profileImg')
     
     profileImgDiv.appendChild(profileImg);
     
@@ -139,14 +150,17 @@ function getProfiles() {
     let profileMainContainer = document.createElement('div');
     profileMainContainer.classList.add('profileMainContainer');  
 
-    let hrElement = document.createElement('hr');
-    hrElement.classList.add('hrElement');
-    profileMainContainer.appendChild(profileInfoDiv);
+    // let hrElement = document.createElement('hr');
+    // hrElement.classList.add('hrElement');
     profileMainContainer.appendChild(profileImgDiv);
+    profileMainContainer.appendChild(profileInfoDiv);
+    
+    profilesRender.appendChild(cover);
     profilesRender.appendChild(profileMainContainer);
-    profilesRender.appendChild(hrElement);
+    // profilesRender.appendChild(hrElement);
+    // profilesRender.appendChild(cover);
     mainSection.appendChild(profilesRender);
-
+   cover.classList.add('cover');
     profileImgDiv.classList.add('profileRightDiv');
     
     profilesRender.classList.add('profileContentRow');
