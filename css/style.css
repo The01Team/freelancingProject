@@ -286,10 +286,7 @@ header nav  li:hover {
     width: 70%;
 }
 
-.index-about-inner,
-.index-profile-inner {
-    padding: 0 0;
-}
+
 .index-about-title h2 {
     font-family: 'Quicksand', sans-serif;
     padding: 0 20px 6px;
@@ -378,6 +375,7 @@ footer p, footer strong, footer b, footer {
 
 .footer-top, .footer-bottom {
     background-color: #1c1f2f;
+    clear: both;
 }
 
 .footer-bottom {
@@ -572,6 +570,8 @@ img {
 font-size: 20px;
 }
 
+/*=======================================================================================================================*/
+/*=======================================================================================================================*/
 
 
 .slider-menu li a {
