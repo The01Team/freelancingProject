@@ -9,19 +9,24 @@ h1, h2, h3, h4, h5, h6{
     font-weight: 900;
    }
 
-
+main form {
+    font-size: 30px;
+}
 
    a, label, input, select,button, textarea{
        font-weight: 800;
        border-radius: 9px;
        font-family: 'Quicksand', sans-serif;
        color: #133558;
+       
 
    }
 
    input, select{
-    height: 20px;
+    height: 40px;
+    width: 150px;
     background: #e1e5e8;
+    font-size: 23px;
    }
 
    textarea{
@@ -30,11 +35,13 @@ h1, h2, h3, h4, h5, h6{
 
    #image{
     background: #c199a2;
+    font-size: 30px;
    }
 
    button {
-    width: 100px;
-    height: 40px;
+       font-size: 30px;
+    width: 150px;
+    height: 60px;
     display: block;
     margin: auto;
     margin-top: 33px;
@@ -42,166 +49,10 @@ h1, h2, h3, h4, h5, h6{
 
    }
 
-   /*========================================HEADER=====================================================================================*/
-
    
-   #main-logo {
-    width:100px;
-position:absolute;
-top: -21px;
-z-index: 1;
-}
-
-.header-bar {
-    background: rgb(0, 0, 0);
-	position: absolute;
-    width: 98.9%;
-	min-width: 300px;
-	height: 60px;
-	border: 10px solid transparent;
-	border-top: 10px solid #fffa;
-	border-left: 10px solid #fffa;
-	box-shadow: 4px 4px 5px rgba(0, 0, 0, 0.25) inset;
-}
-
-.header-bar::after {
-	content: '';
-	/* position: absolute; */
-	top: -10px;
-	right: -10px;
-	width: 30%;
-	height: 49px;
-	border: 10px solid transparent;
-	border-bottom: 10px solid #fffa;
-	border-right: 10px solid #fffa;
-	transition: 0.3s linear all;
-}
-
-.header-bar > .logo {
-	position: absolute;
-	top: calc(50% - 0px);
-	left: 10px;
-	transform: translateY(-50%);
-	color: #fffc;
-	font-family: 'Parisienne', cursive;
-    font-size: 20px;
-	cursor: default;
-	user-select: none;
-}
-
-.slider-menu {
-	position: absolute;
-	top: 0;
-	right: 0;
-	display: flex;
-	list-style-type: none;
-	margin: 0;
-	padding: 0;
-	z-index: 1;
-}
-.slider-menu > li {
-	display: inline-flex;
-	padding: 14px;
-	margin-left: 2px;
-	font-family: 'Quicksand', sans-serif;
-	color: #fff;
-	cursor: pointer;
-	transition: 0.3s linear all;
-	user-select: none;
-}
-.slider-menu  li > a {
-    color: white;
-    font-size: 24px;
-text-decoration: none;
-}
-.slider-menu > li:hover {
-	color: #faa;
-	box-shadow: 0 50px 5px rgba(0, 0, 0, 0.15) inset;
-}
-
-
-.banner {
-    line-height: 2;
-    height: 80px;
-    background-size: cover;
-    background-position: top;
-    position: relative;
-    /* clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%); */
-    background-color: #133558;
-    box-shadow: 2px 2px 2px 2px #918773;
-}
-
-
-.text-box {
-  	position: absolute;
-  	top: 50%;
-  	left: 13%;
-  	transform: translate(-50%, -50%);
-  	text-align: center;
-}
-
-.heading-primary {
-  	color: #fff;
-  	text-transform: uppercase;
-
-  	backface-visibility: hidden;
-  	margin-bottom: 30px;
-}
-
-.heading-primary-main {
-  	display: block;
-  	font-size: 32px;
-  	font-weight: 400;
-  	letter-spacing: 7px;
-}
-
-.heading-primary-sub {
-  	display: block;
-  	font-size: 18px;
-  	font-weight: 700;
-  	letter-spacing: 7.4px;
-}
-
-.text-box a {
-    font-size: 24px;
-    font-family: 'Quicksand', sans-serif;
-    background: white;
-    color: #133558;
-    padding: 20px 14px;
-    text-decoration: none;
-    border-radius: 10px;
-    box-shadow: 3px 3px 6px rgb(84 84 84 / 86%);
-
-}
-
-.text-box a span {
-    cursor: pointer;
-    display: inline-block;
-    position: relative;
-    transition: 0.5s;
-  }
-
-  .text-box a span:after {
-    content: '\00bb';
-    position: absolute;
-    opacity: 0;
-    top: 0;
-    right: -20px;
-    transition: 0.5s;
-  }
-
-  .text-box a:hover span {
-    padding-right: 25px;
-  }
-  
-  .text-box a:hover span:after {
-    opacity: 1;
-    right: 0;
-  }
-
    /*==================FOOTER===========================================================================================================*/
-
-footer p, footer strong, footer b, footer {
+   
+   footer p, footer strong, footer b, footer {
     color: #b0b0b0;
 }
 
@@ -217,7 +68,7 @@ footer p, footer strong, footer b, footer {
     color: #b0b0b0;
     font-family: 'Quicksand', sans-serif;
     
-
+    
 }
 
 
@@ -396,20 +247,20 @@ img {
     display: flex;
     justify-content: space-between;
     align-items: center;
-
-
+    
+    
 }
 
 .footer-site-info {
-font-size: 20px;
+    font-size: 20px;
 }
 
- /*=============================================================================================================================*/
+/*=============================================================================================================================*/
 
 
 
 
- /*=============================================================================================================================*/
+/*=============================================================================================================================*/
 
 
 
@@ -433,7 +284,7 @@ font-size: 20px;
     margin: 0 auto;
     display: block;
     padding: 30px;
-    width: 50%;
+    width: 70%;
     border-radius: 1rem;
     box-shadow: 0 6px 18px rgb(0, 0, 0);
     color: #133558;
@@ -442,18 +293,21 @@ font-size: 20px;
 #createForm h1 {
     text-align: center;
     padding: 0px 20px 6px;
-    font-size: 30px;
+    font-size: 50px;
     display: inline-block;
-    margin-bottom: 20px;
+    margin-bottom: 60px;
     font-family: 'Quicksand', sans-serif;
+font-weight: bold;
 }
 .createFromTitle{
     text-align: center;
 }
 #createForm label,
 #createForm input {
-    width: 250px;
+    width: 400px;
     display: block;
+    border-radius: 20px;
+
 
 }
 #createForm textarea {
@@ -461,7 +315,7 @@ font-size: 20px;
     resize: none;
     /* border: 1.5px solid #fa8752; */
     border-radius: 0.8rem;
-
+    
 }
 
 #createForm div {
@@ -482,3 +336,159 @@ font-size: 20px;
 
 
 
+/*========================================HEADER=====================================================================================*/
+
+
+#main-logo {
+ width:100px;
+position:absolute;
+top: -21px;
+z-index: 1;
+}
+
+.header-bar {
+ background: rgb(0, 0, 0);
+ position: absolute;
+ width: 98.9%;
+ min-width: 300px;
+ height: 60px;
+ border: 10px solid transparent;
+ border-top: 10px solid #fffa;
+ border-left: 10px solid #fffa;
+ box-shadow: 4px 4px 5px rgba(0, 0, 0, 0.25) inset;
+}
+
+.header-bar::after {
+ content: '';
+ /* position: absolute; */
+ top: -10px;
+ right: -10px;
+ width: 30%;
+ height: 49px;
+ border: 10px solid transparent;
+ border-bottom: 10px solid #fffa;
+ border-right: 10px solid #fffa;
+ transition: 0.3s linear all;
+}
+
+.header-bar > .logo {
+ position: absolute;
+ top: calc(50% - 0px);
+ left: 10px;
+ transform: translateY(-50%);
+ color: #fffc;
+ font-family: 'Parisienne', cursive;
+ font-size: 20px;
+ cursor: default;
+ user-select: none;
+}
+
+.slider-menu {
+ position: absolute;
+ top: 0;
+ right: 0;
+ display: flex;
+ list-style-type: none;
+ margin: 0;
+ padding: 0;
+ z-index: 1;
+}
+.slider-menu > li {
+ display: inline-flex;
+ padding: 14px;
+ margin-left: 2px;
+ font-family: 'Quicksand', sans-serif;
+ color: #fff;
+ cursor: pointer;
+ transition: 0.3s linear all;
+ user-select: none;
+}
+.slider-menu  li > a {
+ color: white;
+ font-size: 24px;
+text-decoration: none;
+}
+.slider-menu > li:hover {
+ color: #faa;
+ box-shadow: 0 50px 5px rgba(0, 0, 0, 0.15) inset;
+}
+
+
+.banner {
+ line-height: 2;
+ height: 80px;
+ background-size: cover;
+ background-position: top;
+ position: relative;
+ /* clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%); */
+ background-color: #133558;
+ box-shadow: 2px 2px 2px 2px #918773;
+}
+
+
+.text-box {
+   position: absolute;
+   top: 50%;
+   left: 13%;
+   transform: translate(-50%, -50%);
+   text-align: center;
+}
+
+.heading-primary {
+   color: #fff;
+   text-transform: uppercase;
+
+   backface-visibility: hidden;
+   margin-bottom: 30px;
+}
+
+.heading-primary-main {
+   display: block;
+   font-size: 32px;
+   font-weight: 400;
+   letter-spacing: 7px;
+}
+
+.heading-primary-sub {
+   display: block;
+   font-size: 18px;
+   font-weight: 700;
+   letter-spacing: 7.4px;
+}
+
+.text-box a {
+ font-size: 24px;
+ font-family: 'Quicksand', sans-serif;
+ background: white;
+ color: #133558;
+ padding: 20px 14px;
+ text-decoration: none;
+ border-radius: 10px;
+ box-shadow: 3px 3px 6px rgb(84 84 84 / 86%);
+
+}
+
+.text-box a span {
+ cursor: pointer;
+ display: inline-block;
+ position: relative;
+ transition: 0.5s;
+}
+
+.text-box a span:after {
+ content: '\00bb';
+ position: absolute;
+ opacity: 0;
+ top: 0;
+ right: -20px;
+ transition: 0.5s;
+}
+
+.text-box a:hover span {
+ padding-right: 25px;
+}
+
+.text-box a:hover span:after {
+ opacity: 1;
+ right: 0;
+}

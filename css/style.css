@@ -7,7 +7,12 @@ body {
 /*LAST EDIT*/
 /*==========================================================*/
 
+iframe{
+    width:80%;
+    height:640px;
+    margin:100px 0;
 
+}
 /*Header*/
 /*==========================================================*/
 
@@ -287,10 +292,12 @@ header nav  li:hover {
     padding: 0 20px 6px;
     display: inline-block;
     text-align: center;
-    font-size: 30px;
+    font-size: 50px;
     color: rgba(0, 0, 0, 0.8);
     margin-bottom: 30px;
+    margin-top: 30px;
     font-weight: bold;
+    
 }
 
 .index-about-title {
@@ -337,7 +344,9 @@ margin-bottom: 60px;
     margin: 25px 0 13px;
 }
 
-
+h2:hover{
+    text-decoration: underline;
+}
 
 
 
@@ -564,80 +573,12 @@ font-size: 20px;
 /*=======================================================================================================================*/
 /*=======================================================================================================================*/
 
-#home {
-    clip-path: url(#cache);
-  }
-  
-  #red {
-    fill: none;
-    opacity: 0.15;
-    stroke: #CE1B5F;
-    stroke-width: 12;
-    stroke-miterlimit:10;
-    animation: show 4s;
-    animation-fill-mode: forwards;
-    animation-iteration-count: infinite;
-    animation-timing-function: ease-in-out; 
-  }
-  
-  #blue {
-    fill: none;
-    opacity: 0.15;
-    stroke: #06A1C4;
-    stroke-width: 12;
-    stroke-miterlimit:10;
-    animation: show 4s;
-    animation-fill-mode: forwards;
-    animation-iteration-count: infinite;
-    animation-timing-function: ease-in-out;
-  }
-  
-  #light-blue {
-    fill: none;
-    opacity: 0.15;
-    stroke: #06A1C4;
-    stroke-width: 6;
-    stroke-miterlimit:10;
-    stroke-dasharray: 200;
-    stroke-dashoffset: 800;
-    animation: draw 4s;
-    animation-fill-mode: forwards;
-    animation-iteration-count: infinite;
-    animation-timing-function: ease-in-out;    
-  }
-  
-  @keyframes draw {
-    to {
-      stroke-dashoffset: 0;
-   }
-      }
-  
-  @keyframes show {
-    0% {
-      opacity: 0.15;
-   }
-    50% {
-      opacity: 0.2;
-   }
-    100% {
-      opacity: 0.15;
-   }
-   
-      }
 
-      #home-anim{
-        position: absolute;
-/* bottom: -500px; */
-        height: 1301px;
-        width: 100%;
-    }     
-    .index-about-inner,
-    .index-profile-inner {
-        padding: 0 0;
-        /* position: relative; */
-        /* opacity: 1; */
+.slider-menu li a {
+    font-weight: bold;
     }
-  
-  
-  
-  
+     
+
+ 
+
+    

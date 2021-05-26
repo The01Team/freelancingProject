@@ -55,7 +55,7 @@ function getProfiles() {
     let profileEmailDiv=document.createElement('div');
     let profileNumberDiv=document.createElement('div');
 
-    projectNamePrefix.textContent='Project name: ';
+    projectNamePrefix.textContent='Project name:';
     // skillsRequiredPrefix.textContent='Skills Required';
     // projectDetailsPrefix.textContent='Project Details';
 
