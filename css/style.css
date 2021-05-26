@@ -281,10 +281,7 @@ header nav  li:hover {
     width: 70%;
 }
 
-.index-about-inner,
-.index-profile-inner {
-    padding: 0 0;
-}
+
 .index-about-title h2 {
     font-family: 'Quicksand', sans-serif;
     padding: 0 20px 6px;
@@ -369,6 +366,7 @@ footer p, footer strong, footer b, footer {
 
 .footer-top, .footer-bottom {
     background-color: #1c1f2f;
+    clear: both;
 }
 
 .footer-bottom {
@@ -563,7 +561,83 @@ img {
 font-size: 20px;
 }
 
+/*=======================================================================================================================*/
+/*=======================================================================================================================*/
 
+#home {
+    clip-path: url(#cache);
+  }
+  
+  #red {
+    fill: none;
+    opacity: 0.15;
+    stroke: #CE1B5F;
+    stroke-width: 12;
+    stroke-miterlimit:10;
+    animation: show 4s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out; 
+  }
+  
+  #blue {
+    fill: none;
+    opacity: 0.15;
+    stroke: #06A1C4;
+    stroke-width: 12;
+    stroke-miterlimit:10;
+    animation: show 4s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+  }
+  
+  #light-blue {
+    fill: none;
+    opacity: 0.15;
+    stroke: #06A1C4;
+    stroke-width: 6;
+    stroke-miterlimit:10;
+    stroke-dasharray: 200;
+    stroke-dashoffset: 800;
+    animation: draw 4s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;    
+  }
+  
+  @keyframes draw {
+    to {
+      stroke-dashoffset: 0;
+   }
+      }
+  
+  @keyframes show {
+    0% {
+      opacity: 0.15;
+   }
+    50% {
+      opacity: 0.2;
+   }
+    100% {
+      opacity: 0.15;
+   }
+   
+      }
 
+      #home-anim{
+        position: absolute;
+/* bottom: -500px; */
+        height: 1301px;
+        width: 100%;
+    }     
+    .index-about-inner,
+    .index-profile-inner {
+        padding: 0 0;
+        /* position: relative; */
+        /* opacity: 1; */
+    }
+  
+  
   
   
